@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: ayamllab 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ayamllab 
+    spec:
+      containers:
+        - name: ayamllab 
+          image: crsregistrylab.azurecr.io/ayamllab
+          ports:
+          - containerPort: 8080
